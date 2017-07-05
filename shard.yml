@@ -1,0 +1,11 @@
+name: kemal-github-api
+version: 0.1.0
+
+dependencies:
+  kemal:
+    github: sdogruyol/kemal
+  
+authors:
+  - Sdogruyol <dogruyolserdar@gmail.com>
+
+license: MIT
