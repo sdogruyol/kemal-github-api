@@ -2,12 +2,11 @@
 
 Mock Github API implemented with Kemal to be used as a benchmark suite.
 
-Crystal Version: 0.27.1
-Kemal Version: 0.25.1
+##  What's used?
 
-Ruby Version: 2.5.3p101
-Sinatra Version: v2.0.4
-Puma: 3.12.0
+*Crystal: 0.27.1 Kemal: 0.25.1*
+
+*Ruby Version: 2.5.3p101 Sinatra Version: v2.0.4 Puma: 3.12.0*
 
 ## Install
 
