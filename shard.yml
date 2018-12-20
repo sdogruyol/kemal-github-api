@@ -4,7 +4,12 @@ version: 0.1.0
 dependencies:
   kemal:
     github: sdogruyol/kemal
-  
+    version: 0.25.1
+
+targets:
+  kemal-github-api:
+    main: src/kemal-github-api.cr
+
 authors:
   - Sdogruyol <dogruyolserdar@gmail.com>
 

@@ -1,5 +1,7 @@
 require "kemal"
 
+logging false
+
 # OAuth Authorizations
 get "/authorizations" do
   ""
@@ -967,5 +969,4 @@ delete "/user/keys/:id" do
   ""
 end
 
-logging false
-Kemal.run
+Kemal.run(3000)

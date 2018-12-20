@@ -1,44 +1,66 @@
 # Kemal Github API
 
-Mock Github API implemented with Kemal.
+Mock Github API implemented with Kemal to be used as a benchmark suite.
 
-## Installation
+Crystal Version: 0.27.1
+Kemal Version: 0.25.1
+
+Ruby Version: 2.5.3p101
+Sinatra Version: v2.0.4
+Puma: 3.12.0
+
+## Install
+
+Clone the repo
 
 ```
 git clone https://github.com/sdogruyol/kemal-github-api
 cd kemal-github-api
+```
+
+### Crystal
+
+
+```
 crystal build --release src/kemal-github-api.cr -o bin/kemal-github-api
 ./bin/kemal-github-api
 ```
 
+### Ruby
+
+```
+gem install sinatra puma
+ruby sinatra-github-api.rb -s Puma
+```
+
 ## Benchmarks
 
-Kemal
+*Kemal*
 
 ```
 ~ wrk -c 100 -d 40 http://localhost:3000/applications/123/tokens/123
 Running 40s test @ http://localhost:3000/applications/123/tokens/123
   2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     3.77ms  371.76us  11.22ms   77.99%
-    Req/Sec    13.31k     1.01k   14.70k    51.88%
-  1060074 requests in 40.01s, 109.18MB read
-Requests/sec:  26494.53
-Transfer/sec:      2.73MB
+    Latency     2.18ms  716.18us  15.30ms   83.69%
+    Req/Sec    23.17k     2.30k   27.74k    72.88%
+  1844181 requests in 40.02s, 189.94MB read
+Requests/sec:  46085.66
+Transfer/sec:      4.75MB
 ```
 
-Sinatra
+*Sinatra*
 
 ```
 ➜  ~ wrk -c 100 -d 40 http://localhost:3000/applications/123/tokens/123
 Running 40s test @ http://localhost:3000/applications/123/tokens/123
   2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     6.38ms    5.12ms  84.48ms   78.61%
-    Req/Sec     1.26k   514.25     2.07k    58.25%
-  100189 requests in 40.03s, 16.43MB read
-Requests/sec:   2502.72
-Transfer/sec:    420.38KB
+    Latency     4.06ms    3.08ms  46.54ms   80.29%
+    Req/Sec     1.98k   810.65     3.32k    58.12%
+  157497 requests in 40.03s, 25.83MB read
+Requests/sec:   3934.54
+Transfer/sec:    660.88KB
 ```
 
 ## Contributing

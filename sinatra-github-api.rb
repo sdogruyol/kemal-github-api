@@ -1,5 +1,8 @@
 require "sinatra"
 
+set :logging, false
+set :port, 3000
+
 # OAuth Authorizations
 get "/authorizations" do
   ""
@@ -966,6 +969,3 @@ end
 delete "/user/keys/:id" do
   ""
 end
-
-set :logging, false
-set :port, 3000
