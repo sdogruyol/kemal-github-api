@@ -969,4 +969,4 @@ delete "/user/keys/:id" do
   ""
 end
 
-Kemal.run(3000)
+Kemal.run ENV["PORT"]
