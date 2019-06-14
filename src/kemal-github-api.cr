@@ -969,4 +969,5 @@ delete "/user/keys/:id" do
   ""
 end
 
-Kemal.run ENV["PORT"]
+port = ENV["PORT"]? || 3000
+Kemal.run port.to_i
